@@ -202,4 +202,19 @@ abstract class qtype_ddtoimage_edit_form_base extends question_edit_form {
         return true;
     }
 
+    public function validation($data, $files) {
+        $errors = parent::validation($data, $files);
+        // Ensure that we have at least one drop zone
+        $drops = $data['drops'];
+        $dropcount = 0;
+        foreach ($drops as $key => $drop) {
+            if ($drop['choice'] > 0) {
+                $dropcount++;
+            }
+        }
+        if ($dropcount == 0) {
+            $errors['drops[0]'] = get_string('notenoughdrops', 'qtype_ddimageortext', 1);
+        }
+        return $errors;
+    }
 }

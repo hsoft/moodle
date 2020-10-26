@@ -52,6 +52,7 @@ $string['formerror_nobgimage'] = 'You need to select an image to use as the back
 $string['infinite'] = 'Unlimited';
 $string['label'] = 'Text';
 $string['nolabel'] = 'No label text';
+$string['notenoughdrops'] = 'This type of question requires at least {$a} drop zones';
 $string['pleasedraganimagetoeachdropregion'] = 'Your answer is not complete; please drag an item to each drop region.';
 $string['pluginname'] = 'Drag and drop onto image';
 $string['pluginname_help'] = 'Drag and drop onto image questions require the respondent to drag images or text labels and drop them into defined drop zones on a background image. Draggable items may be grouped so that all items in a particular group are coloured the same as the drop zones. Draggable items marked as unlimited may be dropped into more than one zone.';
